@@ -1,5 +1,6 @@
 import THREE = require("three");
-import imageUrl = require("../static/hank.png");
+import hankUrl = require("../static/hank.png");
+import "../static/luna.png";
 import "./index.scss";
 
 function main(): void {
@@ -53,7 +54,7 @@ function addCanvas(renderer: THREE.Renderer): void {
 
 function createBall(): THREE.Mesh {
     const geometry = new THREE.SphereBufferGeometry(2, 32, 32);
-    const texture = new THREE.TextureLoader().load(imageUrl);
+    const texture = new THREE.TextureLoader().load(hankUrl);
     const material = new THREE.MeshBasicMaterial({ map: texture });
     return new THREE.Mesh(geometry, material);
 }
